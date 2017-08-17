@@ -18,7 +18,6 @@ struct adc_result {
     char    string[20];
     float32 volts;
     int16_t counts;
-    uint8_t channel;
 } adc_result;
 
 CY_ISR_PROTO(DMA_Handler);
@@ -28,10 +27,6 @@ int main(void)
     
     struct adc_result ADC_Data[ADC_SEQUENCED_CHANNELS_NUM];
     size_t string_size = sizeof(ADC_Data[ADC_CHANNEL_0]) / sizeof(char);
-    
-    ADC_Data[ADC_CHANNEL_0].channel = ADC_CHANNEL_0;
-    ADC_Data[ADC_CHANNEL_1].channel = ADC_CHANNEL_1;
-    ADC_Data[ADC_CHANNEL_2].channel = ADC_CHANNEL_2;
 
     DMA_Chn0_SetInterruptCallback(&DMA_Handler);
     CyIntEnable(CYDMA_INTR_NUMBER);
@@ -56,8 +51,8 @@ int main(void)
             UART_PutChar(FORM_FEED_CMD);
             
             for (uint8_t channel = 0; channel < ADC_SEQUENCED_CHANNELS_NUM; channel++) {
-                ADC_Data[channel].volts = ADC_CountsTo_Volts(ADC_Data[channel].channel, ADC_Data[channel].counts);
-                snprintf(ADC_Data[channel].string, string_size, "CH %d: %.3f Volts\r\n", ADC_Data[channel].channel, ADC_Data[channel].volts);
+                ADC_Data[channel].volts = ADC_CountsTo_Volts(channel, ADC_Data[channel].counts);
+                snprintf(ADC_Data[channel].string, string_size, "CH %d: %.3f Volts\r\n", channel, ADC_Data[channel].volts);
                 UART_PutString(ADC_Data[channel].string);
             }
             
