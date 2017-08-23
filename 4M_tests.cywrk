@@ -3,7 +3,7 @@
 <!--This file is machine generated and read. It is not intended to be edited by hand.-->
 <!--Due to this, there is no schema for this file.-->
 <CyGuid_2867d519-54d2-4c01-9830-c51cb08bc3dd type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWorkspaceSerialize" version="5" xml_contents_version="3" name="4M_tests" persistent="4M_tests.cywrk" platform="NOT_USED">
-<current_project name=".\ADC_DMA_Multiple_Chn.cydsn\ADC_DMA_Multiple_Chn.cyprj" />
+<current_project name=".\ADC_DMA_Multiple_Chn_03.cydsn\ADC_DMA_Multiple_Chn_03.cyprj" />
 <wrkspc_folders />
 <files />
 <projects>
@@ -14,6 +14,9 @@
 <v>.\ADC_Polling.cydsn\ADC_Polling.cyprj</v>
 <v>.\ADC_Interrupt.cydsn\ADC_Interrupt.cyprj</v>
 <v>.\ADC_DMA_Multiple_Chn.cydsn\ADC_DMA_Multiple_Chn.cyprj</v>
+<v>.\ADC_DMA_Multiple_Chn_01.cydsn\ADC_DMA_Multiple_Chn_01.cyprj</v>
+<v>.\ADC_DMA_Multiple_Chn_02.cydsn\ADC_DMA_Multiple_Chn_02.cyprj</v>
+<v>.\ADC_DMA_Multiple_Chn_03.cydsn\ADC_DMA_Multiple_Chn_03.cyprj</v>
 </projects>
 <workspace_id v="49a7ebec-1119-4906-a48e-1f14ea9a771d" />
 <WriteAppVersionLastSavedWith v="4.1.0.3210" />
